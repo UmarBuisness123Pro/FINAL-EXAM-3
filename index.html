@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Umar Cakes</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+</head>
+<body>
+  
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">Umar Cakes</div>
+    <div class="controls">
+
+      <!-- Currency -->
+      <div class="dropdown">
+        <button class="dropbtn">Currency: <span id="selectedCurrency">USD</span> ▼</button>
+        <div class="dropdown-content" id="currencyList">
+          <div data-currency="USD" data-rate="1">USD - US Dollar</div>
+          <div data-currency="EUR" data-rate="0.91">EUR - Euro</div>
+          <div data-currency="GBP" data-rate="0.78">GBP - British Pound</div>
+          <div data-currency="SAR" data-rate="3.75">SAR - Saudi Riyal</div>
+          <div data-currency="PKR" data-rate="287">PKR - Pakistani Rupee</div>
+        </div>
+      </div>
+
+      <!-- Language -->
+      <div class="dropdown language-dropdown">
+        <button class="dropbtn">Language: <span id="selectedLanguage">English</span> ▼</button>
+        <input type="text" id="languageSearch" placeholder="Search language..." />
+        <div class="dropdown-content" id="languageList">
+          <div data-lang="en" data-name="English">English</div>
+          <div data-lang="ar" data-name="Arabic">Arabic</div>
+          <div data-lang="ur" data-name="Urdu">Urdu</div>
+          <div data-lang="fr" data-name="French">French</div>
+          <div data-lang="es" data-name="Spanish">Spanish</div>
+          <div data-lang="de" data-name="German">German</div>
+          <div data-lang="zh" data-name="Chinese">Chinese</div>
+          <div data-lang="ja" data-name="Japanese">Japanese</div>
+          <div data-lang="hi" data-name="Hindi">Hindi</div>
+        </div>
+      </div>
+
+      <!-- Icons -->
+      <div class="icon" id="favouritesIcon" title="Favourites ❤️">♡</div>
+      <div class="icon" id="cartIcon" title="Cart 🛒">🛒 <span id="cartCount">0</span></div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h3 class="welcome-subtitle">Welcome to the world of the best cakes!</h3>
+      <h1>🎂 Welcome to Umar Cakes</h1>
+      <p>Crafting sweetness daily for thousands of happy customers.</p>
+      <button id="orderNowBtn">Order Your Cake Now</button>
+      <div class="counter-section">
+        <h2>Cakes Sold Per Day</h2>
+        <div class="counter-number" id="cakeCounter">0</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2>About Us</h2>
+    <div class="about-card">
+      <p>
+        At Umar Cakes, we bring sweetness to your life. With over a decade of baking excellence,
+        we specialize in custom-made cakes that are both beautiful and delicious.
+      </p>
+    </div>
+  </section>
+
+  <!-- OUR BAKERS -->
+  <section class="bakers" id="bakers">
+    <h2>Meet Our Expert Bakers</h2>
+    <div class="baker-cards">
+      <div class="baker-card">
+        <img src="Free Photo _ Portrait of a smiling male chef dressed in uniform.jpg" alt="Chef Ali" />
+        <h3>Baker Ali</h3>
+        <p>Specialist in Chocolate & Fusion Cakes.</p>
+        <button class="fav-btn" data-id="baker1" title="Add to favourites">♡</button>
+      </div>
+      <div class="baker-card">
+        <img src="a312103d-e6a1-429e-8065-887c8d0a2b0d.jpg" alt="Chef Hassan" />
+        <h3>Baker Hassan</h3>
+        <p>Master of Fondant Art & Wedding Cakes.</p>
+        <button class="fav-btn" data-id="baker2" title="Add to favourites">♡</button>
+      </div>
+      <div class="baker-card">
+        <img src="Learn to create photos like this using Midjourney_.jpg"Chef Muhammad" />
+        <h3>Baker Muhammad</h3>
+        <p>Designer of Custom Birthday Cakes.</p>
+        <button class="fav-btn" data-id="baker3" title="Add to favourites">♡</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAKE YOUR OWN CAKE -->
+  <section class="make-cake" id="makeYourCake">
+    <h2>Create Your Dream Cake – Just $5</h2>
+    <p>Select your favorite flavors, toppings, and design your cake exactly how you like!</p>
+    <img src="30 Easy-to-Make Birthday Cupcake Ideas - Anuri's….jpg" alt="Custom Cake" /><br>
+    <button id="customizeCakeBtn">Start Now</button>
+  </section>
+
+  <!-- ITEMS -->
+  <section class="items" id="items">
+    <h2>Our Popular Cakes</h2>
+    <div class="item-list">
+      <div class="item-card" data-price="15" data-id="cake1">
+        <img src="Here’s a recipe inspired by Nestlé Toll House….jpg" alt="Chocolate Cake" />
+        <h3>Chocolate Cake</h3>
+        <p class="price">Price: $15</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="item-card" data-price="18" data-id="cake2">
+        <img src="Deliciously Simple Vanilla Cake Recipe 6.jpg" alt="Vanilla Cake" />
+        <h3>Vanilla Cake</h3>
+        <p class="price">Price: $18</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="item-card" data-price="20" data-id="cake3">
+        <img src="Classic Red Velvet Cake recipe—moist, fluffy, and….jpg" alt="Red Velvet Cake" />
+        <h3>Red Velvet Cake</h3>
+        <p class="price">Price: $20</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="item-card" data-price="22" data-id="cake4">
+        <img src="9df6f862-919b-4265-bdb8-6e4d42ad378e.jpg" alt="Cheesecake" />
+        <h3>Cheesecake</h3>
+        <p class="price">Price: $22</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="item-card" data-price="16" data-id="cake5">
+        <img src="8bbe911d-d05b-4bc7-836c-e6df783185de.jpg" alt="Lemon Cake" />
+        <h3>Lemon Cake</h3>
+        <p class="price">Price: $16</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="item-card" data-price="19" data-id="cake6">
+        <img src="Carrot and Hazelnut Layer Cake 🥕🌰  A spiced….jpg" alt="Carrot Cake" />
+        <h3>Carrot Cake</h3>
+        <p class="price">Price: $19</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="item-card" data-price="21" data-id="cake7">
+        <img src="Best Ever Strawberry Cake.jpg" alt="Strawberry Cake" />
+        <h3>Strawberry Cake</h3>
+        <p class="price">Price: $21</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+      <div class="item-card" data-price="23" data-id="cake8">
+        <img src="The Black Forest Cake is a show-stopping dessert….jpg" alt="Black Forest Cake" />
+        <h3>Black Forest Cake</h3>
+        <p class="price">Price: $23</p>
+        <button class="add-to-cart-btn">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER FORM -->
+  <section class="order" id="orderCake">
+    <h2>Order Your Cake</h2>
+    <form id="orderForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="cakeType" placeholder="Cake Type (Chocolate, Vanilla...)" required />
+      <input type="number" name="quantity" placeholder="Quantity" min="1" required />
+      <textarea name="notes" placeholder="Additional Notes..."></textarea>
+      <button type="submit">Place Order</button>
+    </form>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-list">
+      <blockquote>
+        <p>"Best cake I’ve ever had! So soft and tasty!"</p>
+        <footer>- Amina S.</footer>
+      </blockquote>
+      <blockquote>
+        <p>"Highly recommended. My wedding cake was perfect."</p>
+        <footer>- Zain R.</footer>
+      </blockquote>
+      <blockquote>
+        <p>"Quick delivery and the design was exactly what I wanted."</p>
+        <footer>- Fatima K.</footer>
+      </blockquote>
+    </div>
+  </section>
+
+
+
+ 
+  <!-- LOCATION -->
+  <section class="location" id="location">
+    <h2>Visit Our Bakery</h2>
+    <p>123 Sweet Street, Riyadh, Saudi Arabia</p>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.180143996917!2d46.67529531447889!3d24.71215298404529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f02b78b78f631%3A0x6266bb91c8c1b5f4!2sRiyadh%2C%20Saudi%20Arabia!5e0!3m2!1sen!2sus!4v1691438103294!5m2!1sen!2sus"
+      width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+  <footer class="cake-footer">
+  <div class="footer-container">
+    
+    <div class="footer-section">
+      <h4>WORKING HOURS</h4>
+      <p>Monday - Friday: 08:00 am – 08:30 pm</p>
+      <p>Saturday: 10:00 am – 16:30 pm</p>
+      <p>Sunday: 10:00 am – 16:30 pm</p>
+    </div>
+
+    <div class="footer-section center">
+      <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="Cake Logo" class="cake-icon" />
+      <h2 class="logo-text">cake</h2>
+      <p>"Follow our Social media channels</p>
+      <div class="social-icons">
+        <a href="facebook.com"><i class="fab fa-facebook-f"></i></a>
+        <a href="twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>SUBSCRIBE</h4>
+      <p>Get latest updates and offers.</p>
+      <form class="subscribe-form">
+        <input type="email" placeholder="Email" required />
+        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+
+  </div>
+</footer>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Umar Cakes. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#privacyPolicy">Privacy Policy</a> |
+      <a href="#termsConditions">Terms & Conditions</a>
+    </div>
+  </footer>
+
+  <!-- CART & FAVOURITES MODALS -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeCart">&times;</span>
+      <h2>Your Cart</h2>
+      <ul id="cartItems"></ul>
+    </div>
+  </div>
+
+  <div id="favModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeFav">&times;</span>
+      <h2>Your Favourites</h2>
+      <ul id="favItems"></ul>
+    </div>
+  </div>
+</body>
+</html>
