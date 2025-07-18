@@ -10,7 +10,7 @@ body {
  
   transform: translateY(-5px);
 }
-.item-list:hover{
+.item-card:hover{
    transform: translateY(-5px);
 }
 .testimonials:hover {
