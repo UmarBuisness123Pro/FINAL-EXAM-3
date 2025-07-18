@@ -13,7 +13,7 @@ body {
 .item-card:hover{
    transform: translateY(-5px);
 }
-.testimonials:hover {
+blockquote:hover {
   transform: translateY(-5px);
 }
 
